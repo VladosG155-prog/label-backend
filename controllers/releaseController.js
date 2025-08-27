@@ -1,4 +1,5 @@
 import { Release } from '../models/Release.js';
+import { createAlligatorRelease } from '../services/alligatorService.js';
 
 export const createRelease = async (req, res) => {
   const {
@@ -33,7 +34,7 @@ export const createRelease = async (req, res) => {
     wavPaths,
     tariff,
     status: 'pending',
-    createdBy: req.user.telegramId,
+    createdBy: req.user.id,
   });
 
   await release.save();
@@ -41,7 +42,7 @@ export const createRelease = async (req, res) => {
 };
 
 export const getUserReleases = async (req, res) => {
-  const releases = await Release.find({ createdBy: req.user.telegramId }).sort({ createdAt: -1 });
+  const releases = await Release.find({ createdBy: req.user.username }).sort({ createdAt: -1 });
   const releasesWithUrls = releases.map(r => ({
     ...r.toObject(),
     coverUrl: r.coverPath.replace(process.cwd() + '/', '').replace(/\\/g, '/'),
@@ -50,3 +51,14 @@ export const getUserReleases = async (req, res) => {
 
   res.json({ releases: releasesWithUrls });
 };
+
+
+export const pushRelease = async (req,res) => {
+
+  const releaseId = req.body.releaseId
+
+
+  const release = await createAlligatorRelease(releaseId)
+
+}
+

@@ -1,0 +1,718 @@
+{
+    "levelPlan": "BUSINESS",
+    "level": "PREMIUM",
+    "checklist": {
+        "data": [
+            {
+                "field": "releaseDate",
+                "newValue": "2025-08-13T00:00:00Z",
+                "oldValue": null,
+                "isAccepted": false
+            },
+            {
+                "field": "clineYear",
+                "newValue": "2025",
+                "oldValue": 0,
+                "isAccepted": false
+            },
+            {
+                "field": "plineYear",
+                "newValue": "2025",
+                "oldValue": 0,
+                "isAccepted": false
+            },
+            {
+                "field": "cover",
+                "newValue": "clients/production/60086/releases/cover/i6MRdPFgtSEjg5i89TxtzaIXJJfn1HEiAa6H.jpg",
+                "oldValue": "undefined",
+                "isAccepted": false
+            },
+            {
+                "field": "artists",
+                "newValue": [
+                    {
+                        "id": 90701,
+                        "role": "MAIN"
+                    }
+                ],
+                "oldValue": [],
+                "isAccepted": false
+            },
+            {
+                "field": "title",
+                "newValue": "newReleasik",
+                "oldValue": "newReleasi",
+                "isAccepted": false
+            },
+            {
+                "field": "labelId",
+                "newValue": 42962,
+                "isAccepted": false
+            },
+            {
+                "field": "clineValue",
+                "newValue": "DelayZero",
+                "oldValue": "",
+                "isAccepted": false
+            },
+            {
+                "field": "plineValue",
+                "newValue": "DelayZero",
+                "oldValue": "",
+                "isAccepted": false
+            },
+            {
+                "field": "genre",
+                "newValue": {
+                    "genreId": 52,
+                    "subGenreId": 53
+                },
+                "isAccepted": false
+            }
+        ],
+        "status": "NEW"
+    },
+    "isReleased": false,
+    "articleLabel": "MUA240956",
+    "internalId": "alligator-r2240956",
+    "releaseVersion": null,
+    "releaseId": 240956,
+    "createDate": "2025-08-13T20:23:56Z",
+    "releaseDate": "2025-08-13",
+    "originalReleaseDate": null,
+    "ownEan": null,
+    "clineValue": "DelayZero",
+    "clineYear": "2025",
+    "plineValue": "DelayZero",
+    "plineYear": "2025",
+    "label": "DelayZero",
+    "labelId": 42962,
+    "status": "DRAFT",
+    "contractSigned": false,
+    "client": {
+        "id": 60086,
+        "email": "contact@delayzero.com",
+        "phone": "+79113034731",
+        "firstName": "Данил",
+        "lastName": "Волков",
+        "nickName": "DelayZero",
+        "locale": "RU"
+    },
+    "language": null,
+    "releaseType": "SINGLE",
+    "genre": {
+        "genreId": 52,
+        "subGenreId": 53
+    },
+    "additionalGenres": [],
+    "title": "newReleasik",
+    "media": [
+        {
+            "id": 1305751,
+            "filename": "test.jpg",
+            "url": "https://alligator-media-storage.s3.amazonaws.com/clients/production/60086/releases/cover/i6MRdPFgtSEjg5i89TxtzaIXJJfn1HEiAa6H.jpg",
+            "type": "cover"
+        },
+        {
+            "id": 1305752,
+            "filename": "test.jpg",
+            "url": "https://alligator-media-storage.s3.amazonaws.com/clients/production/60086/releases/cover_750/xBwZGRN0PeyameW8R01sOX1x7FHNyhMbSe8D.jpg",
+            "type": "cover_750"
+        }
+    ],
+    "artists": [
+        {
+            "id": 90701,
+            "role": "MAIN"
+        }
+    ],
+    "persons": [],
+    "tracks": [
+        {
+            "_hide": false,
+            "_startpoint": true,
+            "_isrc": false,
+            "_loaded": 0,
+            "_uploading": false,
+            "additionalGenres": [],
+            "genres": [
+                53
+            ],
+            "startPoint": 0,
+            "releated": 100,
+            "copyrights": 100,
+            "advArtists": [
+                0
+            ],
+            "featArtists": [
+                0
+            ],
+            "composers": [
+                85022
+            ],
+            "lyricists": [
+                85022
+            ],
+            "directors": [
+                0
+            ],
+            "dtCreate": "2025-08-13 20:23:56.229135",
+            "checklist": {
+                "data": [
+                    {
+                        "field": "adult",
+                        "newValue": false,
+                        "oldValue": "undefined",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "instrumental",
+                        "newValue": false,
+                        "oldValue": "undefined",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "copyrights",
+                        "newValue": 100,
+                        "oldValue": "undefined",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "related",
+                        "newValue": 100,
+                        "oldValue": "undefined",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "track",
+                        "newValue": "clients/production/60086/releases/wav/2YX9qc9hA8s6rnuPOELdslAsMbFnJ6xDog30.wav",
+                        "oldValue": "undefined",
+                        "dtUpdated": "2025-08-13 20:26:53",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "artists",
+                        "newValue": [
+                            {
+                                "id": 90701,
+                                "role": "MAIN",
+                                "platforms": [
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    },
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    }
+                                ]
+                            }
+                        ],
+                        "oldValue": [
+                            {
+                                "id": 90701,
+                                "role": "MAIN",
+                                "platforms": [
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    },
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    }
+                                ]
+                            }
+                        ],
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "title",
+                        "newValue": "newReleasik",
+                        "oldValue": "newReleasi",
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "language",
+                        "newValue": 3,
+                        "oldValue": null,
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "recordingYear",
+                        "newValue": 2025,
+                        "oldValue": null,
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "persons",
+                        "newValue": [
+                            {
+                                "id": 85022,
+                                "role": "MUSIC_AUTHOR",
+                                "platforms": [
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    },
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 85022,
+                                "role": "LYRICS_AUTHOR",
+                                "platforms": [
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    },
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    }
+                                ]
+                            }
+                        ],
+                        "oldValue": [
+                            {
+                                "id": 85022,
+                                "role": "MUSIC_AUTHOR",
+                                "platforms": [
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    },
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    }
+                                ]
+                            },
+                            {
+                                "id": 85022,
+                                "role": "LYRICS_AUTHOR",
+                                "platforms": [
+                                    {
+                                        "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                        "streamingPlatformId": 291
+                                    },
+                                    {
+                                        "platformId": "1803860826",
+                                        "streamingPlatformId": 282
+                                    }
+                                ]
+                            }
+                        ],
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "genre",
+                        "newValue": {
+                            "genreId": 52,
+                            "subGenreId": 53
+                        },
+                        "isAccepted": false
+                    },
+                    {
+                        "field": "text",
+                        "newValue": "gagagagagagag",
+                        "oldValue": null,
+                        "isAccepted": false
+                    }
+                ],
+                "status": "NEW"
+            },
+            "trackId": 536938,
+            "trackVersion": null,
+            "text": "gagagagagagag",
+            "title": "newReleasik",
+            "karaoke": null,
+            "genre": {
+                "genreId": 52,
+                "subGenreId": 53
+            },
+            "language": 3,
+            "ownIsrc": null,
+            "related": 100,
+            "adult": false,
+            "instrumental": false,
+            "artists": [
+                {
+                    "id": 90701,
+                    "role": "MAIN",
+                    "platforms": [
+                        {
+                            "platformId": "1803860826",
+                            "streamingPlatformId": 282
+                        },
+                        {
+                            "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                            "streamingPlatformId": 291
+                        }
+                    ]
+                }
+            ],
+            "persons": [
+                {
+                    "id": 85022,
+                    "role": "MUSIC_AUTHOR",
+                    "platforms": [
+                        {
+                            "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                            "streamingPlatformId": 291
+                        },
+                        {
+                            "platformId": "1803860826",
+                            "streamingPlatformId": 282
+                        }
+                    ]
+                },
+                {
+                    "id": 85022,
+                    "role": "LYRICS_AUTHOR",
+                    "platforms": [
+                        {
+                            "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                            "streamingPlatformId": 291
+                        },
+                        {
+                            "platformId": "1803860826",
+                            "streamingPlatformId": 282
+                        }
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 1305753,
+                    "filename": "file_example_WAV_1MG (1).wav",
+                    "url": "https://alligator-media-storage.s3.amazonaws.com/clients/production/60086/releases/wav/2YX9qc9hA8s6rnuPOELdslAsMbFnJ6xDog30.wav",
+                    "type": "wav"
+                },
+                {
+                    "id": 1305754,
+                    "filename": "file_example_WAV_1MG (1).wav",
+                    "url": "https://alligator-media-storage.s3.amazonaws.com/clients/production/60086/releases/mp3/Mps8lpraWWYHhTqBC114Pb1ayIrZTD42PRyX.mp3",
+                    "type": "mp3"
+                }
+            ],
+            "recordingYear": 2025,
+            "clipPreviewFrame": null,
+            "trackData": {
+                "duration": 5.98204081632653
+            },
+            "processStatus": "completed",
+            "processMessage": "",
+            "internalId": "alligator-t2536938",
+            "track": "clients/production/60086/releases/wav/2YX9qc9hA8s6rnuPOELdslAsMbFnJ6xDog30.wav",
+            "checkList": [
+                {
+                    "field": "adult",
+                    "newValue": false,
+                    "oldValue": "undefined",
+                    "isAccepted": false
+                },
+                {
+                    "field": "instrumental",
+                    "newValue": false,
+                    "oldValue": "undefined",
+                    "isAccepted": false
+                },
+                {
+                    "field": "copyrights",
+                    "newValue": 100,
+                    "oldValue": "undefined",
+                    "isAccepted": false
+                },
+                {
+                    "field": "related",
+                    "newValue": 100,
+                    "oldValue": "undefined",
+                    "isAccepted": false
+                },
+                {
+                    "field": "track",
+                    "newValue": "clients/production/60086/releases/wav/2YX9qc9hA8s6rnuPOELdslAsMbFnJ6xDog30.wav",
+                    "oldValue": "undefined",
+                    "dtUpdated": "2025-08-13 20:26:53",
+                    "isAccepted": false
+                },
+                {
+                    "field": "artists",
+                    "newValue": [
+                        {
+                            "id": 90701,
+                            "role": "MAIN",
+                            "platforms": [
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                },
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                }
+                            ]
+                        }
+                    ],
+                    "oldValue": [
+                        {
+                            "id": 90701,
+                            "role": "MAIN",
+                            "platforms": [
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                },
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                }
+                            ]
+                        }
+                    ],
+                    "isAccepted": false
+                },
+                {
+                    "field": "title",
+                    "newValue": "newReleasik",
+                    "oldValue": "newReleasi",
+                    "isAccepted": false
+                },
+                {
+                    "field": "language",
+                    "newValue": 3,
+                    "oldValue": null,
+                    "isAccepted": false
+                },
+                {
+                    "field": "recordingYear",
+                    "newValue": 2025,
+                    "oldValue": null,
+                    "isAccepted": false
+                },
+                {
+                    "field": "persons",
+                    "newValue": [
+                        {
+                            "id": 85022,
+                            "role": "MUSIC_AUTHOR",
+                            "platforms": [
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                },
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                }
+                            ]
+                        },
+                        {
+                            "id": 85022,
+                            "role": "LYRICS_AUTHOR",
+                            "platforms": [
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                },
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                }
+                            ]
+                        }
+                    ],
+                    "oldValue": [
+                        {
+                            "id": 85022,
+                            "role": "MUSIC_AUTHOR",
+                            "platforms": [
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                },
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                }
+                            ]
+                        },
+                        {
+                            "id": 85022,
+                            "role": "LYRICS_AUTHOR",
+                            "platforms": [
+                                {
+                                    "platformId": "spotify:artist:3EfB6okYZcGxCBIbeLt9fS",
+                                    "streamingPlatformId": 291
+                                },
+                                {
+                                    "platformId": "1803860826",
+                                    "streamingPlatformId": 282
+                                }
+                            ]
+                        }
+                    ],
+                    "isAccepted": false
+                },
+                {
+                    "field": "genre",
+                    "newValue": {
+                        "genreId": 52,
+                        "subGenreId": 53
+                    },
+                    "isAccepted": false
+                },
+                {
+                    "field": "text",
+                    "newValue": "gagagagagagag",
+                    "oldValue": null,
+                    "isAccepted": false
+                }
+            ],
+            "artist": 90701
+        }
+    ],
+    "streamingPlatforms": [
+        206,
+        207,
+        209,
+        292,
+        282,
+        211,
+        212,
+        213,
+        215,
+        217,
+        285,
+        218,
+        222,
+        224,
+        225,
+        229,
+        230,
+        231,
+        232,
+        234,
+        235,
+        236,
+        237,
+        238,
+        240,
+        241,
+        242,
+        249,
+        252,
+        255,
+        289,
+        257,
+        258,
+        621,
+        259,
+        290,
+        291,
+        266,
+        267,
+        271,
+        273,
+        197,
+        196,
+        200,
+        195,
+        615,
+        199,
+        280,
+        220,
+        269
+    ],
+    "countries": [],
+    "isFromMigration": null,
+    "cover": "clients/production/60086/releases/cover/i6MRdPFgtSEjg5i89TxtzaIXJJfn1HEiAa6H.jpg",
+    "_ean": false,
+    "_line": false,
+    "_ready": false,
+    "_single": false,
+    "_view": true,
+    "_check_required": false,
+    "_required": {
+        "release": [],
+        "tracks": []
+    },
+    "genres": [],
+    "streamingPlatformsUploadStatus": [],
+    "checkList": [
+        {
+            "field": "releaseDate",
+            "newValue": "2025-08-13T00:00:00Z",
+            "oldValue": null,
+            "isAccepted": false
+        },
+        {
+            "field": "clineYear",
+            "newValue": "2025",
+            "oldValue": 0,
+            "isAccepted": false
+        },
+        {
+            "field": "plineYear",
+            "newValue": "2025",
+            "oldValue": 0,
+            "isAccepted": false
+        },
+        {
+            "field": "cover",
+            "newValue": "clients/production/60086/releases/cover/i6MRdPFgtSEjg5i89TxtzaIXJJfn1HEiAa6H.jpg",
+            "oldValue": "undefined",
+            "isAccepted": false
+        },
+        {
+            "field": "artists",
+            "newValue": [
+                {
+                    "id": 90701,
+                    "role": "MAIN"
+                }
+            ],
+            "oldValue": [],
+            "isAccepted": false
+        },
+        {
+            "field": "title",
+            "newValue": "newReleasik",
+            "oldValue": "newReleasi",
+            "isAccepted": false
+        },
+        {
+            "field": "labelId",
+            "newValue": 42962,
+            "isAccepted": false
+        },
+        {
+            "field": "clineValue",
+            "newValue": "DelayZero",
+            "oldValue": "",
+            "isAccepted": false
+        },
+        {
+            "field": "plineValue",
+            "newValue": "DelayZero",
+            "oldValue": "",
+            "isAccepted": false
+        },
+        {
+            "field": "genre",
+            "newValue": {
+                "genreId": 52,
+                "subGenreId": 53
+            },
+            "isAccepted": false
+        }
+    ],
+    "artist": 90701,
+    "advArtists": [],
+    "featArtists": [],
+    "_changes": true
+}

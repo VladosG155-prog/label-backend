@@ -9,7 +9,7 @@ export const authMiddleware = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
-    const user = await User.findOne({ telegramId: decoded.id });
+    const user = await User.findOne({ username: decoded.username });
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     req.user = user;

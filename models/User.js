@@ -1,18 +1,39 @@
 import mongoose from 'mongoose';
 
 export const userSchema = new mongoose.Schema({
-  telegramId: { type: String, required: true, unique: true },
-  username: String,
-  first_name: String,
+  firstname: String,
   photo_url: String,
+  username: String,
   age: Number,
   email: String,
   role: String,
+  nickname: String,
+  lastname: String,
+  surname: String,
+  INN: String,
+  adress: String,
+  postadress: String,
+  rsnumber: String,
+  ksnumber: String,
+  bankname: String,
+  bik: String,
+  phone: String,
+  musicAlligator: {
+    id: String,
+    platforms: [
+      {
+        id: Number,
+        name: String,
+        platformId: String
+      }
+    ]
+  },
   links: {
     spotify: String,
     yandex: String,
     soundcloud: String,
     vk: String,
+    appleMusic: String
   },
 }, { timestamps: true });
 

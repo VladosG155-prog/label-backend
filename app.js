@@ -7,6 +7,7 @@ import releaseRoutes from './routes/releaseRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import artistsRoutes from './routes/artistsRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
+import documentsRoutes from './routes/docRoutes.js';
 const app = express();
 
 app.use(cors());
@@ -22,5 +23,6 @@ app.use('/releases', releaseRoutes);
 app.use('/profile', profileRoutes);
 app.use('/artists', artistsRoutes);
 app.use('/admin', adminRoutes);
+app.use('/documents',documentsRoutes );
 
 export default app;

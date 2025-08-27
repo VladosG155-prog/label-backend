@@ -9,10 +9,12 @@ export const updateProfile = async (req, res) => {
 
   try {
     const user = await User.findOneAndUpdate(
-      { telegramId: req.user.telegramId },
+      { username: req.user.username },
       {
         $set: {
-          first_name: updates.name,
+          firstName: updates.firstName,
+          lastName: updates.lastName,
+          surname: updates.surname,
           age: updates.age,
           email: updates.email,
           links: updates.links,
