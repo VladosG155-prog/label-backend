@@ -55,7 +55,7 @@ tracks.forEach((track, trackIndex) => {
       rightsEnd,
       FIO: `${artist.lastname} ${artist.firstname} ${artist.surname || ""}`,
       nickname: artist.nickname,
-      licensorShare: track.shares[artist.id] || "", // доля конкретного артиста
+      licensorShare: track.shares[artist.username] || "", // доля конкретного артиста
     });
   });
 });
