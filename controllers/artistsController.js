@@ -4,7 +4,6 @@ import { AlligatorSessionKey, createArtist } from '../services/alligatorService.
 
 export const getArtists = async(req, res) => {
     const artists = await User.find({})
-    console.log(artists);
 
     res.json({ artists });
 };
@@ -16,7 +15,6 @@ export const createUserArtist = async (req, res) => {
     if (!data.nickname) {
       return res.status(400).json({ message: "Имя артиста обязательно" });
     }
-    console.log(data);
 
     const artist = new User(data);
     await artist.save();

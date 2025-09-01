@@ -1,23 +1,20 @@
 import fs from "fs";
+import path, { dirname } from "path";
 import PizZip from "pizzip";
 import Docxtemplater from "docxtemplater";
-import path from "path";
-import { fileURLToPath } from "url";
 import archiver from "archiver";
+import { fileURLToPath } from "url";
 
+// хелпер для форматирования дат
+function formatDate(date) {
+  return date.toLocaleDateString("ru-RU");
+}
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const formatDate = (date) => {
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = date.getFullYear();
-  return `${day}.${month}.${year}`;
-};
+const __dirname = dirname(__filename);
 
 export const generateDoc = async (req, res) => {
   try {
-    const { artists, tracks } = req.body;
+    const { artists, tracks, contractId } = req.body;
 
     if (!artists?.length || !tracks?.length) {
       return res.status(400).json({ message: "Артисты и треки обязательны" });
@@ -25,10 +22,11 @@ export const generateDoc = async (req, res) => {
 
     const generatedFiles = [];
 
-    for (const artist of artists) {
-      const templatePath = path.join(__dirname, "./template-half.docx");
-      const content = fs.readFileSync(templatePath, "binary");
+    // общий шаблон
+    const templatePath = path.join(__dirname, "template-half.docx");
+    const content = fs.readFileSync(templatePath, "binary");
 
+    for (const artist of artists) {
       const zip = new PizZip(content);
       const doc = new Docxtemplater(zip, { paragraphLoop: true, linebreaks: true });
 
@@ -39,37 +37,61 @@ export const generateDoc = async (req, res) => {
       endDate.setFullYear(endDate.getFullYear() + 5);
       const rightsEnd = formatDate(endDate);
 
-      const tracksData = tracks.map(track => ({
-        title: track.title,
-        durationMinutes: track.durationMinutes,
-        durationSeconds: track.durationSecond,
-        licensorShare: track.licensorShare,
-        year: track.year,
-        rightsStart,
-        rightsEnd,
-      }));
-
       const formattedDate = today.toLocaleDateString("ru-RU");
 
+      // 🔹 Декартово произведение: каждый артист × каждый трек
+      console.log(artists);
+
+     const tracksData = [];
+tracks.forEach((track, trackIndex) => {
+  artists.forEach((artist) => {
+    tracksData.push({
+      id: trackIndex + 1, // можно нумеровать по треку или сделать уникальный счетчик
+      title: track.title,
+      durationMinutes: track.durationMinutes,
+      durationSeconds: track.durationSeconds,
+      year: track.year,
+      rightsStart,
+      rightsEnd,
+      FIO: `${artist.lastname} ${artist.firstname} ${artist.surname || ""}`,
+      nickname: artist.nickname,
+      licensorShare: track.shares[artist.id] || "", // доля конкретного артиста
+    });
+  });
+});
+
       doc.setData({
+        // 🔹 данные текущего артиста (для шапки документа)
+        id: contractId,
         FIO: `${artist.lastname} ${artist.firstname} ${artist.surname || ""}`,
-        rsnumber: artist.rsnumber,
-        phone: artist.phone,
-        nickname: artist.nickname,
-        adress: artist.adress,
-        dateNow: formattedDate,
-        username: artist.username,
-        FIOSLICED: `${String(artist.firstname).substring(0,1)}.${String(artist.lastname).substring(0,1)}. ${artist.surname || ""}`,
-        postadress: artist.postadress,
-        email: artist.email,
-        bankname: artist.bankname,
-        bik: artist.bik,
-        ksnumber: artist.ksnumber,
+        FIOSLICED: `${String(artist.firstname).substring(0, 1)}.${String(
+          artist.surname
+        ).substring(0, 1)}. ${artist.lastname || ""}`,
         firstname: artist.firstname || "",
         lastname: artist.lastname || "",
         surname: artist.surname || "",
         nickname: artist.nickname || "",
-        INN: artist.INN || "",
+        username: artist.username,
+        adress: artist.adress,
+        postadress: artist.postadress,
+        phone: artist.phone,
+        email: artist.email,
+        bankname: artist.bankname,
+        bik: artist.bik,
+        rsnumber: artist.rsnumber,
+        ksnumber: artist.ksnumber,
+
+        // 🔹 ИНН или паспорт
+        documentInfo: artist.INN
+          ? `ИНН: ${artist.INN}`
+          : artist.documentInfo,
+
+        // 🔹 общие данные
+        dateNow: formattedDate,
+        rightsStart,
+        rightsEnd,
+
+        // 🔹 треки = все артисты × все треки
         tracks: tracksData,
       });
 
@@ -84,7 +106,7 @@ export const generateDoc = async (req, res) => {
       generatedFiles.push({ fileName, filePath });
     }
 
-    // 🔹 Создаем zip и стримим его в ответ
+    // архивируем все файлы
     res.setHeader("Content-Type", "application/zip");
     res.setHeader("Content-Disposition", `attachment; filename=contracts.zip`);
 
@@ -96,9 +118,9 @@ export const generateDoc = async (req, res) => {
     });
 
     await archive.finalize();
-
   } catch (error) {
     console.error("Ошибка генерации документа:", error);
     res.status(500).json({ message: "Ошибка сервера" });
   }
 };
+

@@ -19,7 +19,6 @@ bot.onText(/\/start (.+)/, async (msg, match) => {
   const user = msg.from;
 
 
-  console.log(user)
 
   console.log(`🚀 Получен payload: ${payload} от ${user.username || user.first_name}`);
 

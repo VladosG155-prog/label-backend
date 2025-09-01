@@ -18,6 +18,7 @@ export const userSchema = new mongoose.Schema({
   bankname: String,
   bik: String,
   phone: String,
+  documentInfo: String,
   musicAlligator: {
     id: String,
     platforms: [
