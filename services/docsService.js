@@ -14,7 +14,7 @@ const __dirname = dirname(__filename);
 
 export const generateDoc = async (req, res) => {
   try {
-    const { artists, tracks, contractId } = req.body;
+    const { artists, tracks, contractId, contractType } = req.body;
 
     if (!artists?.length || !tracks?.length) {
       return res.status(400).json({ message: "Артисты и треки обязательны" });
@@ -23,7 +23,9 @@ export const generateDoc = async (req, res) => {
     const generatedFiles = [];
 
     // общий шаблон
-    const templatePath = path.join(__dirname, "template-half.docx");
+    const template = contractType === '50/50' ? 'template-half.docx' : 'document-80.docx'
+
+    const templatePath = path.join(__dirname, template);
     const content = fs.readFileSync(templatePath, "binary");
 
     for (const artist of artists) {
